@@ -10,6 +10,9 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
+    env:
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
