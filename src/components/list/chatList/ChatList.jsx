@@ -44,7 +44,7 @@ const ChatList = () => {
       const { user, ...rest } = item;
       return rest;
     });
-    console.log(userChats);
+
     const chatIndex = userChats.findIndex(
       (item) => item.chatId === chat.chatId
     );
