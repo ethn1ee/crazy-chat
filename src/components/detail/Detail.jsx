@@ -25,13 +25,13 @@ const Detail = () => {
 
   return (
     <div className="detail">
-      <div className="user">
+      {chatId && <div className="user">
         <img src={user?.avatar || "./avatar.png"} alt="" />
         <h2>{user?.username}</h2>
         <p>Lorem, ipsum dolor sit amet.</p>
-      </div>
+      </div>}
       <div className="info">
-        <div className="option">
+        {/* <div className="option">
           <div className="title">
             <span>Chat settings</span>
             <img src="./arrowUp.png" alt="" />
@@ -86,14 +86,14 @@ const Detail = () => {
             <span>Shared files</span>
             <img src="./arrowUp.png" alt="" />
           </div>
-        </div>
-        <button onClick={handleBlock}>
+        </div> */}
+        {chatId && <button onClick={handleBlock}>
           {isCurrentUserBlocked
             ? "You are blocked!"
             : isReceiverBlocked
             ? "User blocked"
             : "Block user"}
-        </button>
+        </button>}
         <button className="logout" onClick={() => auth.signOut()}>
           Log out
         </button>
